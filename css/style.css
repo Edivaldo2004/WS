@@ -76,6 +76,30 @@ div.efeito-carregamento{
 }
 
 /* Navbar */
+
+#navbar-items a:hover {
+color:rgb(221, 199, 0);
+}
+
+#navbar-items a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid rgb(219, 205, 1);
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+}
+
+#navbar-items a:hover span{
+    transform:scale(1) translateY(0);
+    opacity: 1;
+}
+
 #navbar {
     width: 100%;
     background: #111;
