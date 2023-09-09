@@ -12,7 +12,81 @@
     margin-top: 15%;
 }
 
+/* Menu Responsivo */
+div.menu-lateral{
+    width: 80px;
+    height: 100%;
+    background-color: #202020;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #FF0077;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+div.menu-lateral.expandir{
+    width: 300px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.ativo{
+    background-color: #FF0077;
+}
+
+ul li.item-menu:hover{
+    background: #FF0077;
+}
+
+ul li.item-menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+}
+
+div.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
 /*Carregamento */
+
 
 div.pre-carregamento{
     width: 100%;
@@ -20,30 +94,29 @@ div.pre-carregamento{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(2, 2, 2, 0.918);
-
-    transition: 1.0s;
+    background-color: rgb(0, 0, 0);
+    transition: 2000s;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 div.efeito-carregamento{
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     background-color: white;
     border-radius: 100%;
 
-    animation: efeito 0.5s;
+    animation: efeito 0.7s infinite;
 }
 
 
 @keyframes efeito{
-    200%{
+    0%{
         box-shadow: 0 0 0 0 white;
     }
-    300%{
-        box-shadow: 0 0 0 200px rgb(0, 0, 0);
+    100%{
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.1);
     }
 }
 

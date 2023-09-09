@@ -30,5 +30,5 @@ function preCarregamento(){
 
     setTimeout(() => {
         pre_carremento.style.display = "none";
-    }, 500);
+    }, 1500);
 }
