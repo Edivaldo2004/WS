@@ -15,10 +15,46 @@ a {
     color: inherit;
 }
 
+/* Carregamento */ 
+
+div.pre-carregamento{
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(2, 2, 2, 0.918);
+
+    transition: 1.0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.efeito-carregamento{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 100%;
+
+    animation: efeito 0.5s;
+}
+
+
+@keyframes efeito{
+    200%{
+        box-shadow: 0 0 0 0 white;
+    }
+    300%{
+        box-shadow: 0 0 0 200px rgb(0, 0, 0);
+    }
+}
+
 .btn {
     display: inline-block;
+    margin-top: 2%;
     padding: 15px 60px;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     background: #111;
     color: #eee;
@@ -84,11 +120,11 @@ span{
     align-items: center;
     color: #eee;
     /* Overlay */
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.658);
     background-blend-mode: color;
 }
 
-.btn-2{
+.btns2{
     display: none;
 }
 
@@ -128,7 +164,7 @@ span{
 /* About */
 #features {
     width: 100%;
-    background: #222;
+    background: #181717;
     color: #eee;
     padding: 50px;
 }

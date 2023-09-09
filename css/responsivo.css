@@ -8,16 +8,50 @@
 }
 
 .img-logo{
-    height: 50%;
-    margin-top: 30%;
+    height: 40%;
+    margin-top: 15%;
+}
+
+/*Carregamento */
+
+div.pre-carregamento{
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(2, 2, 2, 0.918);
+
+    transition: 1.0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.efeito-carregamento{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 100%;
+
+    animation: efeito 0.5s;
+}
+
+
+@keyframes efeito{
+    200%{
+        box-shadow: 0 0 0 0 white;
+    }
+    300%{
+        box-shadow: 0 0 0 200px rgb(0, 0, 0);
+    }
 }
 
 /* Showcase */
-
-.btn-2 {
-    flex-direction: column;
-    padding: 12px 50px;
-    font-size: 0.8rem;
+.btns2{
+    position: relative;
+    padding: 15px 60px;
+    font-size: 0.9rem;
     text-transform: uppercase;
     background: #111;
     color: #eee;
@@ -25,8 +59,7 @@
     transition: background 500ms ease;
 }
 
-.btn-2:hover {
-    cursor: pointer;
+.btns2:hover {
     background: #000;
 }
 
