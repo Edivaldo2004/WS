@@ -13,6 +13,33 @@ body {
 	font-family: 'Poppins', sans-serif;
     background-color: #0000006c;
 }
+
+.toggle {
+    position: fixed;
+    z-index: 1;
+    width: 58px;
+    height: 64px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 10;
+  }
+
+  #icon {
+    transform-origin: bottom;
+    animation: anim 1s linear forwards infinite;
+    margin-left: 47%;
+    margin-top: 20%;
+  }
+  
+  @keyframes anim{
+    10% {rotate: 15deg;}
+    10% {rotate: -12deg;}
+    60% {rotate: 15deg;}
+    60% {rotate: 15deg;}
+  }
+  
 .contact-wrap {
 	width: 80%;
 	height: auto;
@@ -194,8 +221,6 @@ body {
 }
 
 @media screen and (max-width: 760px){
-
-    
     
     .contact-in iframe {
         width: 105%;
