@@ -25,6 +25,50 @@ a {
     border-radius: 1px 1px 8px 8px;
   }
 
+  /* Toggle */
+
+  .toggle {
+    position: fixed;
+    z-index: 1;
+    width: 58px;
+    height: 64px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 10;
+  }
+  .toggle::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .toggle.active::before {
+    left: calc(100% - 10px - 24px);
+   font-family: 'Poppins', sans-serif;
+  }
+
+  #icon {
+    transform-origin: bottom;
+    animation: anim 1s linear forwards infinite;
+    margin-left: 47%;
+    margin-top: 20%;
+  }
+  
+  @keyframes anim{
+    10% {rotate: 15deg;}
+    10% {rotate: -12deg;}
+    60% {rotate: 15deg;}
+    60% {rotate: 15deg;}
+  }
+
 /* Carregamento */ 
 
 div.pre-carregamento{
