@@ -126,6 +126,7 @@ div.efeito-carregamento{
 
 #gallery-container {
     grid-template-columns: 1fr;
+    width: 106%;
 }
 
 .gallery-image {
